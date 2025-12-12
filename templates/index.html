@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            scrollbar-width: none;
+        }
+    </style>
+    <title>Uni Diary</title>
+</head>
+
+<body class="bg-slate-700">
+
+    
+    <div class="w-[calc(100vw-20px)] max-w-[900px] min-h-[calc(100vh-40px)] max-h-[calc(100vh-40px)] mx-auto mt-5 mb-5 border border-white bg-slate-500 p-6 relative rounded-lg flex flex-col">
+        
+        <ul id="task-list" class="space-y-4 flex-1 overflow-auto no-scrollbar">
+            {% for t in tasks %}
+              {% include "partials/tasks.html" %}
+            {% endfor %}
+        </ul>
+
+        <button class="bg-slate-700 hover:bg-slate-800
+            text-white font-semibold py-3 px-3 border border-white 
+            rounded-full self-end mt-4" hx-post="/add-task" hx-target="#task-list" hx-swap="beforeend">
+            Add Task
+        </button>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "taskName": "Sample 1",
+        "dueDate": "20-12-2025",
+        "dueTime": "22:00"
+    },
+    {
+        "id": 2,
+        "taskName": "Sample 2",
+        "dueDate": "5-01-2026",
+        "dueTime": "18:00"
+    },
+    {
+        "id": 3,
+        "taskName": "Sample 3",
+        "dueDate": "5-01-2026",
+        "dueTime": "18:00"
+    }
+]
