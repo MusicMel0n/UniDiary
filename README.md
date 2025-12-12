@@ -1,2 +1,4 @@
 # UniDiary
-Web App to keep track of college work
+Web App To Keep Track Of College Work
+
+Made using Flask, HTMX & Tailwind CSS
